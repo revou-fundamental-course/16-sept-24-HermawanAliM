@@ -1,10 +1,9 @@
-// let nama = document.getElementById("nama");
-// console.log(nama);
+let nama = document.getElementById("nama");
+console.log(nama);
 
-// let input_nama = prompt("Masukkan nama anda : ")
-// nama.innerText = input_nama;
+let input_nama = prompt("Masukkan nama anda : ")
+nama.innerText = input_nama;
 
-// Cek apakah elemen, ada atau sudah dibuat sebelumnya
 const checkElemenNama = document.getElementById("form-nama");
 console.log(checkElemenNama);
 
@@ -20,7 +19,6 @@ console.log(checkElemenPesan);
 const checkElemenButtonSubmit = document.getElementById("btn-submit");
 console.log(checkElemenButtonSubmit);
 
-// Ambil nilai dari tiap form input + validasi form
 const addEventButton = checkElemenButtonSubmit.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -45,6 +43,26 @@ const addEventButton = checkElemenButtonSubmit.addEventListener("click", functio
 
   const {sekarang} = getHariIni();
 
+  if (getNama === "") {
+    alert("Nama tidak boleh kosong!");
+    return;
+  }
+
+  if (getTempatLahir === "") {
+    alert("Tanggal lahir tidak boleh kosong!");
+    return;
+  }
+
+  if (selectedGender === "") {
+    alert("Jenis kelamin harus dipilih!");
+    return;
+  }
+
+  if (getPesan === "") {
+    alert("Pesan tidak boleh kosong!");
+    return;
+  }
+
   sectionHasil.innerHTML = `
     <p><span>Waktu saat ini : </span>${sekarang}</p>
     <p><span>Nama : </span>${getNama}</p>
@@ -58,3 +76,18 @@ function getHariIni() {
   const sekarang = new Date();
   return {sekarang}
 }
+
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+document.getElementById('nextBtn').addEventListener('click', function() {
+  slides[currentSlide].style.display = 'none';
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].style.display = 'block';
+});
+
+document.getElementById('prevBtn').addEventListener('click', function() {
+  slides[currentSlide].style.display = 'none';
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  slides[currentSlide].style.display = 'block';
+});

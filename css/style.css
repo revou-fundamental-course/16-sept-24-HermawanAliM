@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #9BB0C1;
   font-family: "Poppins", sans-serif;
@@ -41,20 +45,67 @@ nav a:hover {
 
 /* Hero */
 .hero {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.hero .konten-hero #makanan {
-  width: 68%;
+.konten-hero {
+  text-align: center;
 }
 
-.banner-gambar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.sapa {
+  font-size: 26px;
 }
+
+.sambutan {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: none;  
+  height: 3px; 
+  background-color: #F6995C;
+  width: 20%; 
+  margin: 10px auto; 
+  border-radius: 5px;
+}
+
+.banner-gambar img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#prevBtn, #nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+#nextBtn:hover, #prevBtn:hover {
+  background-color: #F6995C;
+} 
 
 /* Profile */
 .profile,
@@ -81,8 +132,9 @@ nav a:hover {
 .sec-misi {
   border: 1px solid white;
   border-radius: 20px;
-  padding: 10px;
-  margin: 10px;
+  padding: 13px;
+  margin: 14px;
+  text-align: justify;
 }
 
 .teks-visi,
@@ -90,12 +142,16 @@ nav a:hover {
   font-size: 14px;
 }
 
+.sec-misi .teks-misi {
+  margin-left: 10px;
+}
+
 /* Portfolio */
 .produk-unggulan,
 .layanan-kami,
 .pencapaian-penghargaan,
 .testimoni-pelanggan {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .produk-unggulan p,
@@ -106,45 +162,72 @@ nav a:hover {
   text-align: justify;
 }
 
-.foto-produk img {
-  margin: 10px;
+.produk-unggulan h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
 }
 
-.layanan-kami {
-  padding: 40px 20px;
+.produk-unggulan p {
+  margin-bottom: 25px;
+}
+
+.foto-produk {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.produk {
+  background-color: #F6995C;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.layanan-kami, .penghargaan-kami {
+  padding: 12px 12px;
+}
+
+.layanan-kami .layanan .card-layanan #layanan1 {
+  padding-top: 40px;
 }
 
 .produk-unggulan h3,
 .layanan-kami h3,
-.pencapaian-penghargaan h3,
+.penghargaan-kami h3,
 .testimoni-pelanggan h3 {
-  font-size: 23px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
-.layanan-kami p {
-  font-size: 16px;
+.layanan-kami p, .penghargaan-kami p {
+  font-size: 14px;
   margin-bottom: 30px;
 }
 
-.layanan {
+.layanan, .penghargaan {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
   gap: 20px;
 }
 
-.card-layanan {
-  padding: 20px;
+.card-layanan, .card-penghargaan {
   border-radius: 10px;
   text-align: center;
   width: 220px;
+  border: 1px solid white;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card-layanan:hover {
+.card-layanan:hover, .card-penghargaan:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #F6995C;
+  box-shadow: 0 4px 8px white;
 }
 
 .card-layanan img {
@@ -304,18 +387,12 @@ form {
     margin: 10px 0;
   }
 
-  .foto-produk {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .foto-produk img {
     width: 45%;
     margin: 5px;
   }
 
-  .testimoni, .layanan {
+  .foto-produk, .testimoni, .layanan, .penghargaan, .sec-form {
     flex-direction: column;
     align-items: center;
   }

@@ -28,8 +28,12 @@
         <h1 class="sapa">Halo, <span id="nama">Hermawan Ali M.</span></h1>
         <h2 class="sambutan">Selamat datang di website kami</h2>
         <section class="banner-gambar">
-          <img src="/assets/banner1.jpg" alt="Makanan Mie" id="makanan">
+          <img src="/assets/banner1.jpg" alt="Makanan Mie" id="banner-makanan1"  class="slide">
+          <img src="/assets/banner2.jpg" alt="Makanan Mie" id="banner-makanan2"  class="slide" style="display:none;">
+          <img src="/assets/banner3.jpg" alt="Makanan Mie" id="banner-makanan3"  class="slide" style="display:none;">
         </section>
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
       </section>
     </section>
     <!-- Akhir Hero Section -->
@@ -37,6 +41,7 @@
     <!-- Awal Profile Section -->
     <section class="profile" id="profile">
       <h2 class="judul-sec">Our Profile</h2>
+      <hr>
       <section class="tentang-kami">
         <p class="teks-tentang-kami">
           Mie Pedas Hermawan adalah restoran yang berfokus menyajikan mie pedas dengan berbagai level kepedasan yang
@@ -90,6 +95,7 @@
     <!-- Awal Portfolio Section -->
     <section class="portfolio" id="portfolio">
       <h2 class="judul-sec">Portfolio</h2>
+      <hr>
       <section class="pengantar-singkat">
         <p class="teks-pengantar-singkat">
           Di Mie Pedas Hermawan, kami berkomitmen untuk menghadirkan pengalaman kuliner pedas terbaik. Dengan fokus pada
@@ -104,47 +110,58 @@
         <p>Kami menawarkan berbagai varian mie pedas yang selalu diminati pelanggan dari berbagai kalangan. Setiap
           hidangan dibuat dengan bahan-bahan terbaik dan disajikan dengan standar kebersihan dan kualitas tinggi.</p>
         <section class="foto-produk">
-          <img src="/assets/makanan1.png" alt="" width="160">
-          <img src="/assets/makanan3.png" alt="" width="160">
-          <img src="/assets/makanan5.png" alt="" width="160">
-          <img src="/assets/paket.png" alt="" width="160">
+          <section class="produk" id="produk1">
+            <img src="/assets/makanan1.png" alt="Gambar Makanan" id="makanan1" width="160">
+            <h4>Mie Pedas Level 1-10</h4>
+          </section>
+          <section class="produk" id="produk2">
+            <img src="/assets/makanan3.png" alt="Gambar Makanan" id="makanan2" width="160">
+            <h4>Mie Goreng Sambal Matah</h4>
+          </section>
+          <section class="produk" id="produk3">
+            <img src="/assets/makanan5.png" alt="Gambar Makanan" id="makanan3" width="160">
+            <h4>Mie Ayam Rica-Rica</h4>
+          </section>
+          <section class="produk" id="produk4">
+            <img src="/assets/paket.png" alt="Gambar Makanan" id="makanan4" width="160">
+            <h4>Paket Mie Pedas Kombo</h4>
+          </section>
         </section>
       </section>
       <section class="layanan-kami">
         <h3>Layanan Kami</h3>
-        <p>Kami tidak hanya fokus pada produk mie pedas, tetapi juga menyediakan berbagai layanan untuk memanjakan
-          pelanggan :</p>
+        <p>Kami tidak hanya menghadirkan mie pedas sebagai produk utama, tetapi juga menyediakan berbagai layanan tambahan yang bertujuan memberikan kenyamanan dan kepuasan bagi para pelanggan. :</p>
         <section class="layanan">
           <section class="card-layanan">
-            <img src="/assets/icon1.png" alt="" width="160">
+            <img src="/assets/icon1.png" alt="Layanan Makan di Tempat" id="layanan1" width="160">
             <h4>Makan di Tempat</h4>
           </section>
           <section class="card-layanan">
-            <img src="/assets/icon2.png" alt="" width="160">
+            <img src="/assets/icon2.png" alt="Layanan Pesan Antar" id="layanan2" width="160">
             <h4>Pesan Antar</h4>
           </section>
           <section class="card-layanan">
-            <img src="/assets/icon3.png" alt="" width="160">
+            <img src="/assets/icon3.png" alt="Layanan Catering Acara" id="layanan3" width="160">
             <h4>Catering Acara</h4>
           </section>
           <section class="card-layanan">
-            <img src="/assets/icon4.png" alt="" width="160">
+            <img src="/assets/icon4.png" alt="Layanan Franchise Opportunities" id="layanan4 " width="160">
             <h4>Franchise Opportunities</h4>
           </section>
         </section>
       </section>
-      <section class="pencapaian-penghargaan">
-        <h3>Pencapaian & Penghargaan</h3>
+      <section class="penghargaan-kami">
+        <h3>Penghargaan</h3>
         <p>Kami bangga dengan setiap langkah yang telah kami capai bersama tim dan pelanggan setia kami. Beberapa
           pencapaian yang telah diraih antara lain :</p>
-        <section class="layanan">
-          <section class="card-layanan">
+        <section class="penghargaan">
+          <section class="card-penghargaan">
             <img src="/assets/penghargaan1.png" alt="" width="190">
           </section>
-          <section class="card-layanan">
+          <section class="card-penghargaan">
             <img src="/assets/penghargaan2.png" alt="" width="190">
           </section>
-          <section class="card-layanan">
+          <section class="card-penghargaan">
             <img src="/assets/penghargaan3.png" alt="" width="190">
           </section>
         </section>
@@ -157,18 +174,21 @@
           <section class="card-testimoni">
             <img src="assets/profil1.jpg" alt="Profil Orang">
             <h5>Mesa JEHA</h5>
+            ⭐⭐⭐⭐⭐
             <p>“Rasa mie pedasnya benar-benar juara! Level pedas yang bisa dipilih sesuai selera membuat saya ingin
               kembali lagi.”</p>
           </section>
           <section class="card-testimoni">
             <img src="assets/profil2.jpg" alt="Profil Orang">
             <h5>Selena JEHA</h5>
+            ⭐⭐⭐⭐⭐
             <p>“Pelayanan cepat dan ramah, serta mie yang disajikan benar-benar fresh dan nikmat. Favorit saya adalah
               Mie Goreng Sambal Matah.”</p>
           </section>
           <section class="card-testimoni">
             <img src="assets/profil3.jpg" alt="Profil Orang">
             <h5>Charlie JEHA</h5>
+            ⭐⭐⭐⭐⭐
             <p>“Mie Pedas menyediakan layanan catering untuk acara kantor kami, dan semuanya berjalan sangat lancar.
               Makanannya enak, porsinya pas, dan semua tamu puas!”</p>
           </section>
@@ -180,6 +200,7 @@
     <!-- Awal Message Us Section -->
     <section class="message-us" id="message-us">
       <h2 class="judul-sec">Message Us</h2>
+      <hr>
       <section class="sec-form">
         <form name="message-form">
           <section class="input-nama">
