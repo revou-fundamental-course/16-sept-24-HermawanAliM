@@ -347,6 +347,19 @@ form {
   font-weight: bold;
 }
 
+/* Footer */
+footer {
+  background-color: #333; 
+  color: white; 
+  padding: 15px 0; 
+  text-align: center; 
+}
+
+.sec-footer p {
+  margin: 0; 
+  font-size: 14px; 
+  letter-spacing: 1px; 
+}
 
 /* Media Queries*/
 @media (max-width: 768px) {
