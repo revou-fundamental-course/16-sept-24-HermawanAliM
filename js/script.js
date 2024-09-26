@@ -1,9 +1,11 @@
+// Untuk mengambil nilai input nama dari pop-up browser
 let nama = document.getElementById("nama");
 console.log(nama);
 
 let input_nama = prompt("Masukkan nama anda : ")
 nama.innerText = input_nama;
 
+// Mengecek apakah elemen sudah dibuat atau belum
 const checkElemenNama = document.getElementById("form-nama");
 console.log(checkElemenNama);
 
@@ -19,6 +21,7 @@ console.log(checkElemenPesan);
 const checkElemenButtonSubmit = document.getElementById("btn-submit");
 console.log(checkElemenButtonSubmit);
 
+// Memberikan event ketik tombol submit diklik
 const addEventButton = checkElemenButtonSubmit.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -77,6 +80,8 @@ function getHariIni() {
   return {sekarang}
 }
 
+
+// Kode dibawah untuk membuat slider
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
